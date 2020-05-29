@@ -18,8 +18,9 @@ router.get('/', (req, res) => {
     res.send({users: data});
 })
 
-router.post('/new-user', (req, res) => {
+router.post('/signup/users', (req, res) => {
     console.log(req.body);
+    res.send(req.body);
     db.ref('users').push(req.body);
 })
 
